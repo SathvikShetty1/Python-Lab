@@ -98,7 +98,9 @@ Enter a neighbor node for 'E' (or 'done' if finished): D
 Enter the weight between 'E' and 'D': 3
 Enter a neighbor node for 'E' (or 'done' if finished): DONE
 Enter a node (or 'done' if finished): DONE
+Entered graph:
+{'A': {'B': 5, 'C': 2}, 'B': {'A': 5, 'D': 1}, 'C': {'A': 2, 'D': 6}, 'D': {'B': 1, 'C': 6, 'E': 3}, 'E': {'D': 3}}
 Enter the start node: A
 Enter the destination node: E
-Optimal route: ['A', 'C', 'D', 'E']
+Optimal route: ['A', 'B', 'D', 'E']
 """
