@@ -49,10 +49,12 @@ def solve_n_queen(N):
                     print("Q" if cell == 1 else ".", end=" ")
                 print()
             print()
-
-N=4
+#N=4
+N=int(input("Enter no of Queens: "))
 solve_n_queen(N)
+
 """
+Enter no of Queens: 4
 . . Q . 
 Q . . . 
 . . . Q 
@@ -62,5 +64,4 @@ Q . . .
 . . . Q 
 Q . . . 
 . . Q . 
-
 """
