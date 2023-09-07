@@ -12,7 +12,7 @@ class Graph:
     def print_mst(self, parent):
         print("Thermal Station -- Connected to --> Thermal Station Cost")
         for i in range(1, self.V):
-            print(f" {i} -- {parent[i]} {self.graph[i][parent[i]]}")
+            print(f" {i+1} -- {parent[i]+1} {self.graph[i][parent[i]]}")
 
     def prim_mst(self):
         key = [sys.maxsize] * self.V
@@ -40,16 +40,13 @@ class Graph:
 
         self.print_mst(parent)
 
-
-
 n = int(input("Enter the number of thermal power stations: "))
 g = Graph(n)
 
 print("Enter the cost of electrification for each connection:")
 for i in range(n):
     for j in range(i+1, n):
-        cost = int(input(f"Enter the cost between thermal station {i} and {j}: "))
+        cost = int(input(f"Enter the cost between thermal station {i+1} and {j+1}: "))
         g.add_edge(i, j, cost)
-
 
 g.prim_mst()
